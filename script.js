@@ -64,6 +64,7 @@ const par =  document.createElement('p');
 const score = document.querySelector('#score');
 const winner = document.querySelector('#winner');
 par.classList.add('text')
+winner.classList.add('winner')
 
 
 btnPaper.addEventListener('click', ()=>{
@@ -82,13 +83,16 @@ btnPaper.addEventListener('click', ()=>{
     score.textContent = "Player : " + scoreOfPlayer + " - " + " Computer : " + scoreOfComputer;
 
     if(scoreOfComputer == 5){
+        winner.textContent = "COMPUTER WON by score " + scoreOfComputer + ":" + scoreOfPlayer;
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "COMPUTER WON";
     }else if (scoreOfPlayer == 5){
+        winner.textContent = "PLAYER WON by score " + scoreOfPlayer + ":" + scoreOfComputer;
+        if(scoreOfComputer == 0){
+            winner.textContent = "RRRAAAMMMPAAGE!!!!!!"
+        }
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "PLAYER WON";
     }
 
     content.appendChild(par);
@@ -112,13 +116,16 @@ btnRock.addEventListener('click', ()=>{
     score.textContent = "Player : " + scoreOfPlayer + " - " + " Computer : " + scoreOfComputer;
 
     if(scoreOfComputer == 5){
+        winner.textContent = "COMPUTER WON by score " + scoreOfComputer + ":" + scoreOfPlayer;
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "COMPUTER WON";
     }else if (scoreOfPlayer == 5){
+        winner.textContent = "PLAYER WON by score " + scoreOfPlayer + ":" + scoreOfComputer;
+        if(scoreOfComputer == 0){
+            winner.textContent = "RRRAAAMMMPAAGE!!!!!!"
+        }
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "PLAYER WON";
     }
 
     content.appendChild(par);
@@ -145,13 +152,16 @@ btnScisors.addEventListener('click', ()=>{
 
 
     if(scoreOfComputer == 5){
+        winner.textContent = "COMPUTER WON by score " + scoreOfComputer + ":" + scoreOfPlayer;
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "COMPUTER WON";
     }else if (scoreOfPlayer == 5){
+        winner.textContent = "PLAYER WON by score " + scoreOfPlayer + ":" + scoreOfComputer;
+        if(scoreOfComputer == 0){
+            winner.textContent = "RRRAAAMMMPAAGE!!!!!!"
+        }
         scoreOfComputer = 0;
         scoreOfPlayer = 0;
-        winner.textContent = "PLAYER WON";
     }
 
     content.appendChild(par);
