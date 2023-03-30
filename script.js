@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    let arr = ["Paper", "Rock", "Scisors" ];
+    let arr = ["Paper", "Rock", "Scissors" ];
     let num = Math.floor(Math.random() * 3);
     
     console.log(arr[num]);
@@ -14,7 +14,7 @@ function playRound(str1, str2){
     if(str1 == "Paper" && str2 == "Rock"){
         return "You won!"
     }
-    else if(str1 == "Paper" && str2 == "Scisors"){
+    else if(str1 == "Paper" && str2 == "Scissors"){
         return "You lost!"
     }
     else if(str1 == "Paper" && str2 == "Paper"){
@@ -23,19 +23,19 @@ function playRound(str1, str2){
     else if(str1 == "Rock" && str2 == "Paper"){
         return "You lost!"
     }
-    else if(str1 == "Rock" && str2 == "Scisors"){
+    else if(str1 == "Rock" && str2 == "Scissors"){
         return "You won!"
     }
     else if(str1 == "Rock" && str2 == "Rock"){
         return "It's draw!"
     }
-    else if(str1 == "Scisors" && str2 == "Paper"){
+    else if(str1 == "Scissors" && str2 == "Paper"){
         return "You won!"
     }
-    else if(str1 == "Scisors" && str2 == "Rock"){
+    else if(str1 == "Scissors" && str2 == "Rock"){
         return "You lost!"
     }
-    else if(str1 == "Scisors" && str2 == "Scisors"){
+    else if(str1 == "Scissors" && str2 == "Scissors"){
         return "It's draw!"
     }
 }
@@ -59,7 +59,7 @@ function playRound(str1, str2){
 const content = document.querySelector('#text');
 const btnPaper = document.querySelector('#paper');
 const btnRock = document.querySelector('#rock');
-const btnScisors = document.querySelector('#scisors');
+const btnScisors = document.querySelector('#scissors');
 const par =  document.createElement('p');
 const score = document.querySelector('#score');
 const winner = document.querySelector('#winner');
@@ -135,7 +135,7 @@ btnRock.addEventListener('click', ()=>{
 btnScisors.addEventListener('click', ()=>{
     winner.textContent = "";
     let comp = getComputerChoice();
-    let plr = "Scisors";
+    let plr = "Scissors";
     const round = playRound(plr, comp);
     par.textContent = round;
 
